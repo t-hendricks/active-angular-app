@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ActivityComponent } from './activity/activity.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PostsComponent } from './profile/posts/posts.component';
+import { LikesComponent } from './profile/likes/likes.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path: 'posts',
         component: PostsComponent
+      },
+      {
+        path: 'likes',
+        component: LikesComponent
       }
     ],
   }
