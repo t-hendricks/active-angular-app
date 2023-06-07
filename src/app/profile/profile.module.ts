@@ -4,12 +4,14 @@ import { RouterModule } from '@angular/router';
 
 import { PostsComponent } from './posts/posts.component';
 import { ProfileComponent } from './profile.component';
+import { LikesComponent } from './likes/likes.component';
 
 
 @NgModule({
   declarations: [
     ProfileComponent,
-    PostsComponent
+    PostsComponent,
+    LikesComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { ProfileComponent } from './profile.component';
   ],
   exports: [
     ProfileComponent,
-    PostsComponent
+    PostsComponent,
+    LikesComponent
   ]
 })
 export class ProfileModule { }
