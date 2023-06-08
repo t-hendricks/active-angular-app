@@ -3,10 +3,10 @@
         <h3>{{ profile.data.userName }}</h3>
         <ul class="nav nav-tabs card-header-tabs justify-content-center">
             <li class="nav-item me-5">
-                <a routerLink="/profile/posts" routerLinkActive="active" class="nav-link" aria-current="true" href="#">Activities</a>
+                <a (click)="getCurrentUserContent()" routerLink="/profile/posts" routerLinkActive="active" class="nav-link" aria-current="true" href="#">Activities</a>
             </li>
             <li class="nav-item ms-5">
-                <a routerLink="/profile/likes" routerLinkActive="active" class="nav-link" aria-current="true" href="#">Likes</a>
+                <a (click)="getCurrentUserContent()" routerLink="/profile/likes" routerLinkActive="active" class="nav-link" aria-current="true" href="#">Likes</a>
             </li>
         </ul>
     </div>
