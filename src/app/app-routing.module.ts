@@ -15,17 +15,17 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    title: 'Username',
+    title: 'Profile',
     component: ProfileComponent,
     children: [
       {
         path: 'posts',
-        title: 'Username activities',
+        title: 'Posts',
         component: PostsComponent
       },
       {
         path: 'likes',
-        title: 'Username likes',
+        title: 'Likes',
         component: LikesComponent
       }
     ],
