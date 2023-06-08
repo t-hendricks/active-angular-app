@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
   token: string = '';
+  profile: any;
   
   constructor(private http: HttpClient) { }
 
@@ -17,5 +18,13 @@ export class AuthService {
   login(username: string, password: string) {
     return this.http
     .post(`http://localhost:8080/auth/users/login`, {userName: username, password: password});
+  }
+
+  getCurrentUserContent() {
+    const token = localStorage.getItem('token');
+    console.log(token);
+
+    return this.http
+    .get(`http://localhost:8080/api/user/activities`, {headers: {['Authorization']: `Bearer ${token}`}});
   }
 }
