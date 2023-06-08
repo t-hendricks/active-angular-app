@@ -13,4 +13,9 @@ export class AuthService {
     return this.http
     .post(`http://localhost:8080/auth/users/register`, {userName: username, password: password});
   }
+
+  login(username: string, password: string) {
+    return this.http
+    .post(`http://localhost:8080/auth/users/login`, {userName: username, password: password});
+  }
 }
