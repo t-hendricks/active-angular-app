@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { ActivityComponent } from './activity/activity.component';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ActivityComponent } from './activity/activity.component';
     AppComponent,
     AuthComponent,
     ActivityComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
