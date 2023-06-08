@@ -14,4 +14,11 @@ export class ActivityService {
     return this.http
     .get(`http://localhost:8080/api/activities`, {headers: {['Authorization']: `Bearer ${token}`}})
   }
+
+  createActivity(text: string) {
+    const token = localStorage.getItem('token');
+
+    return this.http
+    .post(`http://localhost:8080/api/activities`, {content: text}, {headers: {['Authorization']: `Bearer ${token}`}});
+  }
 }
