@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PostsComponent } from './profile/posts/posts.component';
 import { LikesComponent } from './profile/likes/likes.component';
 import { AuthComponent } from './auth/auth.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,11 @@ const routes: Routes = [
         component: LikesComponent
       }
     ],
+  },
+  {
+    path: 'post',
+    title: 'Activate',
+    component: PostComponent
   },
   {
     path: '',
