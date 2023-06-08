@@ -1,17 +1,16 @@
-<div>
+<div *ngIf="profile">
     <ul class="list-group">
-        <li class="list-group-item d-flex justify-content-center">
+        <li *ngFor="let like of profile.data.likedActivities" class="list-group-item d-flex justify-content-center">
             <div class="card text-bg-light w-75">
-                <h5 class="card-header">Username</h5>
                 <div class="card-body">
                     <blockquote class="blockquote text-center mb-0">
-                        <p class="card-text">Content.</p>
+                        <p class="card-text">{{ like.activity.content }}</p>
                     </blockquote>
                     <br>
-                    <a href="#" class="btn btn-primary">Logo</a><span> Likes: #</span>
+                    <a href="#" class="btn btn-primary">Logo</a><span> Likes: {{ like.activity.likes.length }}</span>
                 </div>
                 <div class="card-footer text-body-secondary">
-                    Time
+                    {{ like.activity.activityDate }}
                 </div>
             </div>
         </li>
