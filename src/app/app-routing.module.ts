@@ -10,18 +10,22 @@ import { AuthComponent } from './auth/auth.component';
 const routes: Routes = [
   {
     path: 'activity',
+    title: 'Activities',
     component: ActivityComponent
   },
   {
     path: 'profile',
+    title: 'Username',
     component: ProfileComponent,
     children: [
       {
         path: 'posts',
+        title: 'Username activities',
         component: PostsComponent
       },
       {
         path: 'likes',
+        title: 'Username likes',
         component: LikesComponent
       }
     ],
