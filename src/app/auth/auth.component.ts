@@ -18,14 +18,26 @@ export class AuthComponent {
     .subscribe({
       next: data => {
         this.response = data;
+        // this.login(username, password);
       },
       error: error => {
         this.response = error;
+        console.log(this.response.error.message);
       }
     });
   }
 
-  login() {
-    console.log(this.response);
+  login(username: string, password: string) {
+    this.authService.login(username, password)
+    .subscribe({
+      next: data => {
+        this.response = data;
+        localStorage.setItem('token', this.response.message);
+      },
+      error: error => {
+        this.response = error;
+        console.log(this.response.error.message);
+      }
+    });
   }
 }
