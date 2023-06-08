@@ -1,13 +1,12 @@
-<div class="card text-bg-light mb-3">
-    <h5 class="card-header">Username</h5>
+<div *ngIf="activity" class="card text-bg-light mb-3">
     <div class="card-body">
         <blockquote class="blockquote text-center mb-0">
-            <p class="card-text">Content.</p>
+            <p class="card-text">{{ activity.data.content }}</p>
         </blockquote>
         <br>
-        <a href="#" class="btn btn-primary">Logo</a><span> Likes: #</span>
+        <a href="#" class="btn btn-primary">Logo</a><span> Likes: {{ activity.data.likes.length }}</span>
     </div>
     <div class="card-footer text-body-secondary">
-        Time
+        {{ activity.data.activityDate }}
     </div>
 </div>
