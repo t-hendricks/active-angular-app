@@ -18,7 +18,7 @@ export class AuthComponent {
     .subscribe({
       next: data => {
         this.response = data;
-        // this.login(username, password);
+        this.login(username, password);
       },
       error: error => {
         this.response = error;
