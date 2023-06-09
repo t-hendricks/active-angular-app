@@ -10,19 +10,37 @@ export class AuthService {
   
   constructor(private http: HttpClient) { }
 
+  /**
+   * This function returns an Observable htttp POST request.
+   * 
+   * @param username a username string 
+   * @param password a password string
+   * @returns void
+   */
   register(username: string, password: string) {
     return this.http
     .post(`http://localhost:8080/auth/users/register`, {userName: username, password: password});
   }
 
+  /**
+   * This function returns an Observable htttp POST request.
+   * 
+   * @param username a username string 
+   * @param password a password string
+   * @returns void
+   */
   login(username: string, password: string) {
     return this.http
     .post(`http://localhost:8080/auth/users/login`, {userName: username, password: password});
   }
 
+  /**
+   * This function returns an Observable htttp GET request.
+   * 
+   * @returns void
+   */
   getCurrentUserContent() {
     const token = localStorage.getItem('token');
-    console.log(token);
 
     return this.http
     .get(`http://localhost:8080/api/user/activities`, {headers: {['Authorization']: `Bearer ${token}`}});
