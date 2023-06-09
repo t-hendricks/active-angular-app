@@ -13,4 +13,11 @@ export class LikesComponent {
   constructor(private authService: AuthService, private activityService: ActivityService) { 
     this.profile = this.authService.profile;
   }
+
+  removeLike(id: number) {
+    this.activityService.removeLike(id)
+    .subscribe(res => {
+      console.log(res);
+    })
+  }
 }
