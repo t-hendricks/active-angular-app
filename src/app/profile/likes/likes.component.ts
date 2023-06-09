@@ -18,6 +18,10 @@ export class LikesComponent implements OnInit {
     this.getCurrentUserContent();
   }
 
+  /**
+   * This function subscribes to a http get request 
+   * observable to receive user's info.
+   */
   getCurrentUserContent() {
     this.authService.getCurrentUserContent()
     .subscribe(res => {
@@ -26,6 +30,11 @@ export class LikesComponent implements OnInit {
     })
   }
 
+  /**
+   * This function subscribes to a http delete request 
+   * observable to remove an existing activity post from current 
+   * logged-in user like list.
+   */
   removeLike(id: number) {
     this.activityService.removeLike(id)
     .subscribe(res => {
