@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivityService } from 'src/app/services/activity/activity.service';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 export class LikesComponent {
   profile: any;
   
-  constructor(private authService: AuthService) { 
+  constructor(private authService: AuthService, private activityService: ActivityService) { 
     this.profile = this.authService.profile;
   }
 }
