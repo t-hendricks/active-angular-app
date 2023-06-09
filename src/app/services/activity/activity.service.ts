@@ -28,4 +28,11 @@ export class ActivityService {
     return this.http
     .post(`http://localhost:8080/api/activities/${postId}`, {}, {headers: {['Authorization']: `Bearer ${token}`}});
   }
+
+  removeLike(postId: number) {
+    const token = localStorage.getItem('token');
+
+    return this.http
+    .delete(`http://localhost:8080/api/activities/${postId}`, {headers: {['Authorization']: `Bearer ${token}`}});
+  }
 }
