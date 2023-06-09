@@ -39,7 +39,7 @@ My motto when learning any new subject or developing new ideas is 'function over
 - Add custom styling
 
 ## Resources
-These are general websites that helped me accomplish most of my roadblocks.
+These are general websites that helped me pass most of my roadblocks.
 - [Stack Overflow](https://stackoverflow.com/)
 - [Angular Docs](https://angular.io/docs)
 - General Assembly's Lessons
