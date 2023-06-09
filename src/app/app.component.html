@@ -1,4 +1,5 @@
 <div class="container px-0 mt-5 h-100 w-100  border-2 border-primary rounded-4">
+    <!-- Header -->
     <nav class="navbar bg-body-tertiary rounded-top-4 w-100 mx-0 mb-1">
         <div class="container-fluid d-flex justify-content-center">
             <a class="navbar-brand h1" routerLink="activity">@Active</a>
@@ -7,6 +8,7 @@
 
     <div class="row mx-2">
         <div class="col d-flex align-items-center justify-content-center sticky-top h-100">
+            <!-- Navigation -->
             <div class="nav flex-column nav-pills border border-2 rounded-4 w-100" id="v-pills-tab" role="tablist">
                 <button routerLink="activity" routerLinkActive="active" class="nav-link" id="v-pills-home-tab"
                     data-toggle="pill" type="button" role="tab">Home</button>
@@ -16,7 +18,7 @@
                     data-toggle="pill" type="button" role="tab">Post Activity</button>
             </div>
         </div>
-
+        <!-- Content -->
         <div class="col">
             <router-outlet class="tab-pane fade" id="v-pills-home" role="tabpanel" tabindex="0"></router-outlet>
         </div>
