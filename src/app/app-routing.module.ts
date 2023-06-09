@@ -11,7 +11,7 @@ import { PostComponent } from './post/post.component';
 const routes: Routes = [
   {
     path: 'activity',
-    title: 'Activities',
+    title: 'Activity',
     component: ActivityComponent
   },
   {
@@ -33,7 +33,7 @@ const routes: Routes = [
   },
   {
     path: 'post',
-    title: 'Activate',
+    title: 'Post',
     component: PostComponent
   },
   {
