@@ -7,7 +7,7 @@
                         <p class="card-text">{{activity.content}}</p>
                     </blockquote>
                     <br>
-                    <a href="#" class="btn btn-primary">Logo</a><span> Likes: {{ activity.likes.length }}</span>
+                    <a (click)="addLike(activity.id)" class="btn btn-primary">Add Like</a>
                 </div>
                 <div class="card-footer text-body-secondary">
                     {{ activity.activityDate }}
