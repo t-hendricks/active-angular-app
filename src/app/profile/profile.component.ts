@@ -15,6 +15,10 @@ export class ProfileComponent implements OnInit {
     this.getCurrentUserContent();
   }
 
+  /**
+   * This function subscribes to a http get request 
+   * observable to receive user's info.
+   */
   getCurrentUserContent() {
     this.authService.getCurrentUserContent()
     .subscribe(res => {
