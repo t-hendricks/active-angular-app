@@ -18,7 +18,6 @@ export class ProfileComponent implements OnInit {
   getCurrentUserContent() {
     this.authService.getCurrentUserContent()
     .subscribe(res => {
-      console.log(res);
       this.profile = res;
       this.authService.profile = res;
     })
