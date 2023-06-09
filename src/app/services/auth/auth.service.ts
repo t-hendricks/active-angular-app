@@ -11,11 +11,12 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   /**
-   * This function returns an Observable htttp POST request.
+   * This function makes a http post request to 
+   * register a new user with given credentials.
    * 
    * @param username a username string 
    * @param password a password string
-   * @returns void
+   * @returns http Observable
    */
   register(username: string, password: string) {
     return this.http
@@ -23,11 +24,12 @@ export class AuthService {
   }
 
   /**
-   * This function returns an Observable htttp POST request.
+   * This function makes a http post request to 
+   * log in an existing user with given credentials.
    * 
    * @param username a username string 
    * @param password a password string
-   * @returns void
+   * @returns http Observable
    */
   login(username: string, password: string) {
     return this.http
@@ -35,9 +37,10 @@ export class AuthService {
   }
 
   /**
-   * This function returns an Observable htttp GET request.
+   * This function makes a http get request to retreive 
+   * current logged-in user's information.
    * 
-   * @returns void
+   * @returns http Observable
    */
   getCurrentUserContent() {
     const token = localStorage.getItem('token');
