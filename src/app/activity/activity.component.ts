@@ -20,4 +20,11 @@ export class ActivityComponent implements OnInit {
     })
   }
 
+  addLike(id: number) {
+    this.activityService.addLike(id)
+    .subscribe(res => {
+      console.log(res);
+    })
+  }
+
 }
