@@ -34,6 +34,8 @@ export class PostsComponent implements OnInit {
    * This function subscribes to a http post request 
    * observable to add an existing activity post to current 
    * logged-in user like list.
+   * 
+   * @param id a number representing activity id
    */
   addLike(id: number) {
     this.activityService.addLike(id)
