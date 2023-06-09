@@ -18,6 +18,10 @@ export class PostsComponent implements OnInit {
     this.getCurrentUserContent();
   }
 
+  /**
+   * This function subscribes to a http get request 
+   * observable to receive user's info.
+   */
   getCurrentUserContent() {
     this.authService.getCurrentUserContent()
     .subscribe(res => {
@@ -26,6 +30,11 @@ export class PostsComponent implements OnInit {
     })
   }
 
+  /**
+   * This function subscribes to a http post request 
+   * observable to add an existing activity post to current 
+   * logged-in user like list.
+   */
   addLike(id: number) {
     this.activityService.addLike(id)
     .subscribe(res => {
