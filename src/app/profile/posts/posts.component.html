@@ -1,0 +1,18 @@
+<div *ngIf="profile">
+    <ul class="list-group">
+        <li *ngFor="let activity of profile.data.activities" class="list-group-item d-flex justify-content-center">
+            <div class="card text-bg-light w-75">
+                <div class="card-body">
+                    <blockquote class="blockquote text-center mb-0">
+                        <p class="card-text">{{activity.content}}</p>
+                    </blockquote>
+                    <br>
+                    <a (click)="addLike(activity.id)" class="btn btn-primary">Add Like</a>
+                </div>
+                <div class="card-footer text-body-secondary">
+                    {{ activity.activityDate }}
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

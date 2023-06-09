@@ -1,0 +1,12 @@
+<div class="card mb-2">
+    <h5 class="card-header">Activity</h5>
+    <div class="card-body">
+        <form>
+            <div class="form-floating">
+                <textarea [(ngModel)]="text" type="text" name="content" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px" minlength="2" maxlength="200" required></textarea>
+            </div>
+            <button (click)="postActivity(text)" routerLink="/profile" class="btn btn-primary mt-2">Post</button>
+        </form>
+    </div>
+</div>
