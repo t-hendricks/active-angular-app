@@ -14,8 +14,6 @@ export class ActivityComponent implements OnInit {
   ngOnInit() {
     this.activityService.getRandomActivity()
     .subscribe(res => {
-      console.log(res);
-      
       this.activity = res;
     })
   }
