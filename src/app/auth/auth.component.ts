@@ -13,6 +13,13 @@ export class AuthComponent {
 
   constructor(private authService: AuthService) { }
 
+  /**
+   * This function subscribes to a http post request to 
+   * register a new user with given credentials.
+   * 
+   * @param username a username string 
+   * @param password a password string
+   */
   register(username: string, password: string) {
     this.authService.register(username, password)
     .subscribe({
@@ -27,6 +34,13 @@ export class AuthComponent {
     });
   }
 
+  /**
+   * This function subscribes to a http post request to 
+   * login an existing user with given credentials.
+   * 
+   * @param username a username string 
+   * @param password a password string
+   */
   login(username: string, password: string) {
     this.authService.login(username, password)
     .subscribe({
